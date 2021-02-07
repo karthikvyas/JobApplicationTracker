@@ -1,7 +1,7 @@
 //job class:represents a job
 class Job
 {
-    constructor(company,link,status,notes)
+    constructor(company,link,status,notes,jobID)
     {
         this.company=company;
         this.link=link;
