@@ -94,11 +94,11 @@ class Store{
     }
 
 
-    static removeJob(jobID)
+    static removeJob(company)
     {
           const jobs=Store.getJobs();
           jobs.ForEach((job,index)=>{
-                if(job.jobID===jobID)
+                if(job.company===company)
                 {
                     jobs.splice(index,1);
                 }
@@ -163,7 +163,7 @@ document.querySelector('#job-list').addEventListener('click',(e)=>{
     UI.deleteJob(e.target);
     
     //remove job from storage
-    Store.removeJob(e.target.parentElement.previousElementSibling.textContent);
+    Store.removeJob(e.target.parentElement.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.textContent);
     
 });
 
